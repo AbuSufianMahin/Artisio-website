@@ -1,10 +1,13 @@
 import React from 'react';
+import RegisterForm from './RegisterForm';
 
 const RegisterPage = () => {
     return (
-        <section>
-            this is RegisterPage
-        </section>
+        <div className="flex flex-1 lg:items-center justify-center">
+            <div className="w-full max-w-md">
+                <RegisterForm />
+            </div>
+        </div>
     );
 };
 

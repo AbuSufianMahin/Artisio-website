@@ -1,21 +1,25 @@
 import Link from 'next/link';
 import React from 'react';
+import { Button } from '../ui/button';
 
 const Navbar = () => {
     return (
-        <nav className='w-10/12 md:w-11/12 max-w-7xl mx-auto border py-5 flex justify-between'>
-            <div>Logo</div>
-            <div>
-                <ul className='flex gap-5'>
-                    <Link href="/home"> <li>Home</li></Link>
-                    <li>Products</li>
-                    <li>Add Products</li>
-                </ul>
-            </div>
-            <div>
-                login/register button
-            </div>
-        </nav>
+        <header className='border bg-secondary border-b-2'>
+            <nav className='w-10/12 md:w-11/12 max-w-7xl py-4 mx-auto flex justify-between'>
+                <div>Logo</div>
+                <div>
+                    <ul className='flex gap-5 font-semiboldnpm '>
+                        <li><Link href="/home">Home</Link></li>
+                        <li><Link href="/products">Products</Link></li>
+                        <li><Link href="/add-products">Add Products</Link></li>
+                    </ul>
+                </div>
+                <div className='flex gap-2'>
+                    <Button size={"sm"} variant={"outline"}>Login</Button>
+                    <Button size={"sm"}>Register</Button>
+                </div>
+            </nav>
+        </header>
     );
 };
 

@@ -1,10 +1,15 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 
 const LoginForm = () => {
+    const [showPass, setShowPass] = useState(false);
     return (
         <form className="flex flex-col gap-6" >
             <div className="flex flex-col items-center gap-2 text-center">
@@ -24,7 +29,27 @@ const LoginForm = () => {
                     <div className="flex items-center">
                         <Label htmlFor="password">Password</Label>
                     </div>
-                    <Input id="password" type="password" placeholder="Enter Password" required />
+                    <div className="relative w-full">
+                        <Input
+                            id="password"
+                            type={showPass ? "text" : "password"}
+                            placeholder="Enter password"
+                            required
+                        />
+                        <Button
+                            variant="ghost"
+                            className="absolute right-0 top-0 z-1 rounded-l-none active:scale-92"
+                            type="button"
+                            onClick={() => setShowPass(!showPass)}
+                        >
+                            {
+                                showPass ?
+                                    <EyeOff />
+                                    :
+                                    <Eye />
+                            }
+                        </Button>
+                    </div>
                 </div>
                 <Button type="submit" className="w-full">
                     Login

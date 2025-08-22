@@ -1,10 +1,16 @@
+import Footer from '@/components/shared/Footer';
+import Navbar from '@/components/shared/Navbar';
 import React from 'react';
 
-const HomeLayout = () => {
+const HomeLayout = ({ children }) => {
     return (
-        <section>
-            This is HomeLayout
-        </section>
+        <>
+            <Navbar></Navbar>
+            <div className='min-h-screen'>
+                {children}
+            </div>
+            <Footer></Footer>
+        </>
     );
 };
 

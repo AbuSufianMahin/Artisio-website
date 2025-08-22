@@ -25,8 +25,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='hidden sm:flex gap-2'>
-                    <Button size={"sm"} variant={"outline"}>Login</Button>
-                    <Button size={"sm"}>Register</Button>
+                    <Link href={"/login"}><Button size={"sm"} variant={"outline"}>Login</Button></Link>
+                    <Link href={"register"}><Button size={"sm"}>Register</Button></Link>
                 </div>
 
 
@@ -50,7 +50,7 @@ const Navbar = () => {
                             <DropdownMenuItem>Add Products</DropdownMenuItem>
                             <DropdownMenuSeparator />
                             {/* <DropdownMenuItem>Login</DropdownMenuItem> */}
-                            <DropdownMenuItem>Logout</DropdownMenuItem>
+                            {/* <DropdownMenuItem>Logout</DropdownMenuItem> */}
                         </DropdownMenuContent>
                     </DropdownMenu>
                 </div>

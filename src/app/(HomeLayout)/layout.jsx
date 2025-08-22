@@ -4,13 +4,13 @@ import Navbar from '@/components/shared/Navbar';
 
 const HomeLayout = ({ children }) => {
     return (
-        <>
-            <Navbar></Navbar>
-            <div className='min-h-screen'>
+        <div className='min-h-screen flex flex-col justify-between'>
+            <div>
+                <Navbar></Navbar>
                 {children}
             </div>
             <Footer></Footer>
-        </>
+        </div>
     );
 };
 

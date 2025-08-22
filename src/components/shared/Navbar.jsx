@@ -14,7 +14,7 @@ import { Menu } from 'lucide-react';
 
 const Navbar = () => {
     return (
-        <header className='border bg-secondary border-b-2'>
+        <header className='bg-secondary border-b-2'>
             <nav className='w-11/12 md:w-10/12 max-w-7xl py-5 mx-auto flex items-center justify-between'>
                 <div>Logo</div>
                 <div className='hidden sm:flex'>

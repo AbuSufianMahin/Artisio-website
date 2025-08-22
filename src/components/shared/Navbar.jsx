@@ -21,7 +21,7 @@ const Navbar = () => {
                     <ul className='flex gap-8 text-sm lg:gap-16 lg:text-base font-semibold'>
                         <li><Link href="/home">Home</Link></li>
                         <li><Link href="/products">Products</Link></li>
-                        <li><Link href="/add-products">Add Products</Link></li>
+                        <li><Link href="/dashboard/add-product">Add Products</Link></li>
                     </ul>
                 </div>
                 <div className='hidden sm:flex gap-2'>

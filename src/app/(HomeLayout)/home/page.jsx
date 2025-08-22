@@ -1,6 +1,4 @@
-import HeroSection from '@/components/Sections/Home/HeroSection';
-import React from 'react';
-
+import HeroSection from '@/components/Sections/Home/HeroSection/HeroSection';
 const Home = () => {
     return (
         <section>
